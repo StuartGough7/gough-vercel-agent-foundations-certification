@@ -1,5 +1,6 @@
 # Ship It Shop — Vercel Agent Foundations Certification
 
+a
 A Next.js e-commerce app used as the hands-on project for the Vercel Agent Foundations Certification. The storefront brand is **Ship It Shop**; the backend it talks to is the Vercel Swag Store API.
 
 The repo has two layers:
@@ -31,25 +32,25 @@ The storefront only needs `BYPASS_SECRET` to run. The `STORE_BUSINESS_AGENT_*` v
 
 ## Environment variables
 
-| Variable | Required | Purpose |
-| --- | --- | --- |
-| `BYPASS_SECRET` | Yes | Vercel deployment-protection bypass secret. Sent as the `x-vercel-protection-bypass` header on every API call. Server-only — never give it a `NEXT_PUBLIC_` prefix. |
-| `API_BASE_URL` | No | Override the backend API base URL. Defaults to `https://vercel-agentic-swag-store-api.vercel.app/api`. |
-| `STORE_BUSINESS_AGENT_URL` | Admin chat only | HTTP base URL of the deployed store-business-agent. |
-| `STORE_BUSINESS_AGENT_BASIC_USER` | Admin chat only | HTTP Basic auth user matching the agent's `ADMIN_AGENT_BASIC_USER`. |
-| `STORE_BUSINESS_AGENT_BASIC_PASSWORD` | Admin chat only | HTTP Basic auth password matching the agent's `ADMIN_AGENT_BASIC_PASSWORD`. |
-| `NEXT_PUBLIC_SITE_URL` | No | Public site URL used for metadata. Defaults to `http://localhost:3000`. |
+| Variable                              | Required        | Purpose                                                                                                                                                             |
+| ------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BYPASS_SECRET`                       | Yes             | Vercel deployment-protection bypass secret. Sent as the `x-vercel-protection-bypass` header on every API call. Server-only — never give it a `NEXT_PUBLIC_` prefix. |
+| `API_BASE_URL`                        | No              | Override the backend API base URL. Defaults to `https://vercel-agentic-swag-store-api.vercel.app/api`.                                                              |
+| `STORE_BUSINESS_AGENT_URL`            | Admin chat only | HTTP base URL of the deployed store-business-agent.                                                                                                                 |
+| `STORE_BUSINESS_AGENT_BASIC_USER`     | Admin chat only | HTTP Basic auth user matching the agent's `ADMIN_AGENT_BASIC_USER`.                                                                                                 |
+| `STORE_BUSINESS_AGENT_BASIC_PASSWORD` | Admin chat only | HTTP Basic auth password matching the agent's `ADMIN_AGENT_BASIC_PASSWORD`.                                                                                         |
+| `NEXT_PUBLIC_SITE_URL`                | No              | Public site URL used for metadata. Defaults to `http://localhost:3000`.                                                                                             |
 
 `.env.local` is gitignored; `.env.example` is the redacted template.
 
 ## Scripts
 
-| Command | Description |
-| --- | --- |
-| `pnpm dev` | Start the dev server on http://localhost:3000 |
-| `pnpm build` | Production build |
-| `pnpm start` | Serve the production build |
-| `pnpm lint` | Wired to `eslint .`, but ESLint is not installed yet — this fails until a linter is added |
+| Command      | Description                                                                               |
+| ------------ | ----------------------------------------------------------------------------------------- |
+| `pnpm dev`   | Start the dev server on http://localhost:3000                                             |
+| `pnpm build` | Production build                                                                          |
+| `pnpm start` | Serve the production build                                                                |
+| `pnpm lint`  | Wired to `eslint .`, but ESLint is not installed yet — this fails until a linter is added |
 
 There is no test framework configured.
 
